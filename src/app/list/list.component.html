@@ -1,0 +1,41 @@
+<div class="mat-elevation-z8 w-100">
+    <table mat-table [dataSource]="dataSource">
+  
+      <!-- Position Column -->
+      <ng-container matColumnDef="titre"  >
+        <th mat-header-cell *matHeaderCellDef > Titre </th>
+        <td (click)="goToDetail()" mat-cell *matCellDef="let element" width="50%"> {{element.titre}} </td>
+      </ng-container>
+  
+      <!-- Name Column -->
+      <ng-container matColumnDef="statut" >
+        <th mat-header-cell *matHeaderCellDef class="text-center"> Statut </th>
+        <td (click)="goToDetail()" mat-cell *matCellDef="let element" width="12%" class="text-center"> {{element.statut}} </td>
+      </ng-container>
+  
+      <!-- Weight Column -->
+      <ng-container matColumnDef="note" >
+        <th mat-header-cell *matHeaderCellDef class="text-center"> Note </th>
+        <td (click)="goToDetail()" mat-cell *matCellDef="let element" width="12%" class="text-center"> {{element.note}} </td>
+      </ng-container>
+  
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="priorite" >
+        <th mat-header-cell *matHeaderCellDef class="text-center"> Priorité </th>
+        <td (click)="goToDetail()" mat-cell *matCellDef="let element" width="12%" class="text-center"> {{element.priorite}} </td>
+      </ng-container>
+  
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="image" >
+        <th mat-header-cell *matHeaderCellDef class="text-center"> image </th>
+        <td (click)="goToDetail()" mat-cell *matCellDef="let element" class="p-0 image" width="12%" class="text-center">
+            <img src="https://image.tmdb.org/t/p/w500/srYya1ZlI97Au4jUYAktDe3avyA.jpg" alt="" width="100%">
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  
+    <mat-paginator [pageSizeOptions]="[6, 10, 20]" showFirstLastButtons></mat-paginator>
+  </div>
