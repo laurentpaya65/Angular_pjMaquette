@@ -2,12 +2,19 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AccueilcontentComponent } from './accueil/accueilcontent/accueilcontent.component';
 import { DetailboardComponent } from './detail/detailboard/detailboard.component';
-import { ListComponent } from './list/list.component';
+import { ListSeriesComponent } from './list/list-series/list-series.component';
+import { ListfilmComponent } from './list/listfilm/listfilm.component';
+import { AccountComponent } from './signup/account/account.component';
+import { LoginComponent } from './signup/login/login.component';
+
 
 const routes: Routes = [
   {path:'', component : AccueilcontentComponent},
-  {path:'list' , component : ListComponent},
-  {path:'detail', component : DetailboardComponent}
+  {path:'listfilm' , component : ListfilmComponent},
+  {path:'listSeries' , component : ListSeriesComponent },
+  {path:'detail', component : DetailboardComponent},
+  {path:'login',component : LoginComponent},
+  {path:'account',component : AccountComponent}
 ];
 
 @NgModule({

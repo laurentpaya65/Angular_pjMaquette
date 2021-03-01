@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EtatserieComponent implements OnInit {
 
-  nbEpisodeTot = 9;
+  nbEpisodeTot = 15;
   nbSaisonTot = 5;
   saisons:EtatSaison[] = [];
 
@@ -23,7 +23,7 @@ export class EtatserieComponent implements OnInit {
       for (let j=1 ; j<this.nbEpisodeTot+1 ; j++) {
         let etatEpisode = {episode:j,presence:false,statut:false};
                
-        if (j < nbEpisode) {
+        if (j < nbEpisode+1) {
           etatEpisode.presence = true;
         } else {
           etatEpisode.presence = false;
@@ -40,6 +40,19 @@ export class EtatserieComponent implements OnInit {
      
     }
     console.log(this.saisons);
+  }
+
+  tagEpisode(numSaison,numEpisode) {
+    console.log("saison n°"+numSaison+" - episode n°"+numEpisode);
+    
+    for (let j=0 ; j<this.saisons[numSaison-1].episodes.length ; j++) {
+      if (j<numEpisode) {
+        this.saisons[numSaison-1].episodes[j].statut = true;
+      } else {
+        this.saisons[numSaison-1].episodes[j].statut = false;
+      }
+      console.log("saison n°"+numSaison+" - episode n°"+numEpisode);
+    }
   }
 }
 export interface EtatSaison {

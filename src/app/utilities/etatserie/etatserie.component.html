@@ -1,17 +1,20 @@
-<table class="">
-     
-    <tbody class="border border-secondary ">
-      <tr *ngFor="let saison of saisons">
-        <td>saison {{saison.numSaison}}</td>
-        <td  *ngFor="let episode of saison.episodes" >
-            <div *ngIf="episode.presence" [class.green]="episode.statut" [class.black]="!episode.statut"
-                    class="episode text-center border border-secondary border-1">
-                {{episode.episode}}
-            </div>
-          
-        </td>
-      </tr>
-      
-    </tbody>
-</table>
+<div class="table-size">
+
+  <table class="">
+       
+      <tbody class="border border-secondary ">
+        <tr *ngFor="let saison of saisons">
+          <td class="titre">saison {{saison.numSaison}}</td>
+          <td  (click)="tagEpisode(saison.numSaison, episode.episode)" *ngFor="let episode of saison.episodes" >
+              <div *ngIf="episode.presence" [class.green]="episode.statut" [class.black]="!episode.statut"
+                      class="episode text-center border border-secondary border-1">
+                  {{episode.episode}}
+              </div>
+            
+          </td>
+        </tr>
+        
+      </tbody>
+  </table>
+</div>
 

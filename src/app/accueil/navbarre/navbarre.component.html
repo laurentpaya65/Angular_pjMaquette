@@ -1,4 +1,4 @@
-<div class="d-flex navbarre justify-content-between  bg-warning">
+<!-- <div class="d-flex navbarre justify-content-between  bg-warning">
     <button (click)="goToRoot()" type="button" class="btn btn-light rounded-pill ms-5 my-3">Home</button>
     <div class="d-flex ">
         <button type="button" class="btn btn-secondary rounded-pill mx-3 my-3">
@@ -6,6 +6,59 @@
         </button>
         <button type="button" class="btn btn-secondary rounded-pill mx-3 my-3">Mes series</button>
     </div>
-    <button type="button" class="btn btn-primary rounded-pill me-5 my-3">SignUp</button>
-</div>
+    <div class="dropdown">
+        <button (click)="showDropDown()" class="btn btn-secondary dropdown-toggle rounded-pill me-5 my-3" type="button" id="dropdownMenuButton1"  data-bs-toggle="dropdown" aria-expanded="false">
+          SignUp
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" [ngClass]="{'show': toggleFlag}">
+          <li><a routerLink="/login"  (click)="toggleDeasapered()" routerLinkActive="active" class="dropdown-item" href="">Login</a></li>
+          <li><a routerLink="/account" (click)="toggleDeasapered()" routerLinkActive="active" class="dropdown-item" href="">Creer votre compte</a></li>
+        </ul>
+    </div>
+</div> -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a (click)="goToRoot()" class="nav-link active" aria-current="true" href="#">Home</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li> -->
+          <li (onblur)="toggleDeasapered()" class="nav-item dropdown">
+            <a (click)="showMenuMesFilms()" class="nav-link dropdown-toggle"  id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Mes Films/Series
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown1" [ngClass]="{'show': toggleMesFilm}">
+              <li><a (click)="toggleDeasapered()" class="dropdown-item" routerLink="/listfilm" routerLinkActive="active" href="#">Mes Films</a></li>
+              <li><a (click)="toggleDeasapered()" class="dropdown-item" routerLink="/listSeries" routerLinkActive="active" href="#">Mes Series</a></li>
+              <!-- <li><hr class="dropdown-divider"></li> -->
+              <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a (click)="showMenuSignup()" class="nav-link dropdown-toggle"  id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Signup
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown2" [ngClass]="{'show': toggleSignup}">
+              <li><a (click)="toggleDeasapered()" class="dropdown-item" routerLink="/login"  routerLinkActive="active" href="#">Login</a></li>
+              <li><a (click)="toggleDeasapered()" class="dropdown-item" routerLink="/account"  routerLinkActive="active" href="#">Creer mon compte</a></li>
+              <!-- <li><hr class="dropdown-divider"></li> -->
+              <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
 

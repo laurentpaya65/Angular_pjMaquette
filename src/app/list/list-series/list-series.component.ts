@@ -1,16 +1,18 @@
-import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-list',
-  templateUrl: './list.component.html',
-  styleUrls: ['./list.component.scss']
+  selector: 'app-list-series',
+  templateUrl: './list-series.component.html',
+  styleUrls: ['./list-series.component.scss']
 })
-export class ListComponent implements OnInit {
+export class ListSeriesComponent implements OnInit {
+
   displayedColumns: string[] = ['titre', 'statut', 'note', 'priorite', 'image'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
@@ -27,7 +29,6 @@ export class ListComponent implements OnInit {
   goToDetail() {
     this.router.navigate(["detail"]);
   }
-
 }
 // ************************************************************
 //    Element à mettre en MODEL

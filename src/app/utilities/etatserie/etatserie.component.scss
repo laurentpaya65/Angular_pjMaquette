@@ -1,20 +1,38 @@
+
+div.table-size {
+    overflow: scroll;
+    width:300px;
+}
 table {
     border-spacing: 0px;
-    table-layout: auto;
-    width: 100%;
-
+    table-layout: fixed;
+    width: auto;
+    border-collapse: unset;
+    text-align:left;
 }
-// tbody {
-//     width: 100%
+// tr {
+//     text-align: left;
 // }
-
+// td {
+//     height: 20px;
+//     width : 20px;
+// }
+// 
+td>div {
+    border-radius: 5px;
+}
+td>div:hover {
+    cursor: pointer;
+}
+.titre {
+    min-width: 60px;
+}
 .episode {
     height: 20px;
     width : 20px;
-    
 }
 .green {
-    background-color: green;
+    background-color: rgb(126, 212, 126);
 }
 .white {
     background-color:white;

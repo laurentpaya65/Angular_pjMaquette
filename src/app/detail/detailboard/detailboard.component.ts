@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailboardComponent implements OnInit {
 
-  acteurs:number[] = [0,0,0,0,0,0];
+  
   
   constructor() { }
 
