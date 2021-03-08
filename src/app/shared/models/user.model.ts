@@ -1,4 +1,6 @@
-export interface User {
+import {ItemVideo} from './movie.model';
+
+export class User {
     id: number;
     username: string;
     firstname: string;
@@ -7,8 +9,30 @@ export interface User {
     password: string;
     active: boolean;
     rolesList: Array<string>;
-    // itemVideos: Array<ItemVideo>
-    subscribeDate: string;
+    videos: Array<ItemVideo>
+    subscribeDate: Date;
+
+    constructor( id: number,
+        username: string,
+        firstname: string,
+        lastname: string,
+        email: string,
+        password: string,
+        active: boolean,
+        rolesList: Array<string>,
+        // itemVideos: Array<ItemVideo>
+        subscribeDate: Date   ) {
+            this.id = id;
+            this.username = username;
+            this.firstname = firstname;
+            this.lastname = lastname ;
+            this.email = email ;
+            this.password = password;
+            this.active = active;
+            this.rolesList = rolesList;
+            // itemVideos: Array<ItemVideo>
+            this.subscribeDate = new Date(subscribeDate);
+        }
 }
 
 

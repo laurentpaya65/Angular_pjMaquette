@@ -1,7 +1,14 @@
+import {Author} from './Author';
+import {Season} from './Season';
+
 export interface Video {
     id: number;
-    title: string;
-    categorie: string;
     typeVideo: string;
-    image: string;
+    title: string;
+    categories: Array<string>;
+    imagePath: string;
+    overview: string;
+    authors: Array<Author>;
+    original_language: string;
+    seasons: Array<Season>;
 }

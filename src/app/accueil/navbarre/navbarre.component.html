@@ -2,7 +2,7 @@
     <button (click)="goToRoot()" type="button" class="btn btn-light rounded-pill ms-5 my-3">Home</button>
     <div class="d-flex ">
         <button type="button" class="btn btn-secondary rounded-pill mx-3 my-3">
-            <a routerLink="/list" routerLinkActive="active" class="list-group-item  list-group-item-action" href="">Mes films</a> 
+            <a routerLink="/list" routerLinkActive="active" class="list-group-item  list-group-item-action" href="">Mes films</a>
         </button>
         <button type="button" class="btn btn-secondary rounded-pill mx-3 my-3">Mes series</button>
     </div>
@@ -47,8 +47,8 @@
               Signup
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown2" [ngClass]="{'show': toggleSignup}">
-              <li><a (click)="toggleDeasapered()" class="dropdown-item" routerLink="/login"  routerLinkActive="active" href="#">Login</a></li>
-              <li><a (click)="toggleDeasapered()" class="dropdown-item" routerLink="/account"  routerLinkActive="active" href="#">Creer mon compte</a></li>
+              <li><a (click)="toggleDeasapered()" class="dropdown-item" routerLink="board/login"  routerLinkActive="active" href="#">Login</a></li>
+              <li><a (click)="toggleDeasapered()" class="dropdown-item" routerLink="board/account"  routerLinkActive="active" href="#">Creer mon compte</a></li>
               <!-- <li><hr class="dropdown-divider"></li> -->
               <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
             </ul>

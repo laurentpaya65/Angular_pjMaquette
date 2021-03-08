@@ -4,3 +4,7 @@
     <input name="password" ngModel placeholder="Mot de passe" type="password" class="form-control">
     <button>Envoyer</button>
 </form>
+
+<div *ngIf="userPresent">
+    <p>{{us.user$.getValue().username}}</p>
+</div>

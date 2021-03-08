@@ -23,6 +23,8 @@ import { MdePopoverModule } from '@material-extended/mde';
 import { MatCardModule } from '@angular/material/card'
 import { ListfilmComponent } from './list/listfilm/listfilm.component';
 import { ListSeriesComponent } from './list/list-series/list-series.component';
+import { BoardComponent } from './signup/board/board.component';
+import { NavigueComponent } from './signup/navigue/navigue.component';
 
 
 
@@ -41,7 +43,9 @@ import { ListSeriesComponent } from './list/list-series/list-series.component';
     EtatserieComponent,
     LoginComponent,
     AccountComponent,
-    ListSeriesComponent
+    ListSeriesComponent,
+    BoardComponent,
+    NavigueComponent
     
     
   ],
